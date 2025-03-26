@@ -143,6 +143,7 @@ namespace PALM_2_lab_2
                     coloumnSum[i] += jagged[j][i];
                 }
             }
+            Console.WriteLine(string.Join(" ", coloumnSum));
 
             // сортування стовпчиків методом вставками
             for (int i = 1; i < coloumnSum.Length; i++)
