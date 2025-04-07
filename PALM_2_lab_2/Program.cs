@@ -143,6 +143,7 @@ namespace PALM_2_lab_2
                     coloumnSum[i] += jagged[j][i];
                 }
             }
+            Console.WriteLine(string.Join(" ", coloumnSum));
 
             Console.WriteLine("Невідсортований масив сум стовпчиків");
             Console.WriteLine(string.Join(" ", coloumnSum));
