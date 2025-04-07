@@ -144,6 +144,9 @@ namespace PALM_2_lab_2
                 }
             }
 
+            Console.WriteLine("Невідсортований масив сум стовпчиків");
+            Console.WriteLine(string.Join(" ", coloumnSum));
+
             // сортування стовпчиків методом вставками
             for (int i = 1; i < coloumnSum.Length; i++)
             {
@@ -157,10 +160,14 @@ namespace PALM_2_lab_2
                         jagged[k][j] = jagged[k][j + 1];
                         jagged[k][j + 1] = temp;
                     }
-                    coloumnSum[j + 1] = key;
+                    coloumnSum[j + 1] = coloumnSum[j];
                     j = j - 1;
                 }
+                coloumnSum[j + 1] = key;
             }
+
+            Console.WriteLine("Відсортований масив сум стовпчиків");
+            Console.WriteLine(string.Join(" ", coloumnSum));
 
             foreach (int[] arr in jagged)
             {
@@ -169,7 +176,7 @@ namespace PALM_2_lab_2
         }
         static int[][] Matrix()
         {
-            Console.Write("Введіть кількість рядків в матриці: ");
+            Console.WriteLine("Введіть кількість рядків в матриці: ");
             int n = int.Parse(Console.ReadLine());
 
             int[][] jagged = new int[n][];
